@@ -36,3 +36,4 @@ WHERE valor > (
     SELECT AVG(valor) FROM proposta
 );
 
+

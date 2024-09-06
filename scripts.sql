@@ -1,7 +1,4 @@
-SELECT nomeFuncionario AS nome, 'Funcionario' AS tipo
-FROM funcionario
-
+-- Combina nomes de funcionários das tabelas funcionario e funcionarioBons, removendo duplicatas.
+SELECT nomeFuncionario FROM funcionario
 UNION
-
-SELECT nomeCliente AS nome, 'Cliente' AS tipo
-FROM cliente;
+SELECT nomeFuncionario FROM funcionarioBons;

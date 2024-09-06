@@ -35,3 +35,4 @@ SELECT * FROM proposta
 WHERE valor > (
     SELECT AVG(valor) FROM proposta
 );
+

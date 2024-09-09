@@ -24,9 +24,9 @@ WHERE funcionarioId IN (
 -- Seleciona clientes com funcionários classificados como bons.
 SELECT * FROM cliente
 WHERE clienteId IN (
-    SELECT proposta.funcionarioId
-    FROM proposta
-    JOIN funcionarioBons ON proposta.funcionarioId = funcionarioBons.funcionarioId
+    SELECT p.funcionarioId
+    FROM proposta p
+    JOIN funcionarioBons f ON p.funcionarioId = f.funcionarioId
 );
 
 

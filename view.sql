@@ -48,5 +48,17 @@ LEFT JOIN proposta p ON c.clienteId = p.clienteId;
 
 SELECT * FROM ClienteComPropostas; -- Consultando VIEW
 
-CREATE VIEW funcionarioComCliente AS 
+CREATE VIEW funcionarioComCliente AS -- Criando VIEW
 SELECT 
+    c.clienteId,
+    c.nomeCliente,
+    c.cpfCliente,
+    c.cidade,
+    f.funcionarioId,
+    f.nomeFuncionario,
+    f.cpfFuncionario,
+    f.telefoneFuncionario
+FROM cliente c 
+LEFT JOIN funcionario f ON c.cpfCliente = f.cpfFuncionario;
+
+SELECT * FROM funcionarioComCliente; -- Consultando VIEW
